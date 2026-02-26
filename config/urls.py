@@ -37,5 +37,6 @@ def welcome(request):
     """)
 
 urlpatterns = [
+    path("", welcome),  
     path('admin/', admin.site.urls),
 ]
