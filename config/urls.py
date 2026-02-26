@@ -14,8 +14,27 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path
+from django.http import HttpResponse
+from datetime import datetime
+
+def welcome(request):
+    now = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
+    return HttpResponse(f"""
+    <html>
+      <head><title>KDemo</title></head>
+      <body style="font-family: Arial; padding: 24px;">
+        <h1>✅ Welcome to K Demo (Django)</h1>
+        <p>Host: kdemo.jadukori.com</p>
+        <p>Last render: <b>{now}</b></p>
+        <p>If you see this, git-sync + Django reload is working.</p>
+        <hr/>
+        <a href="/admin/">Go to Admin</a>
+      </body>
+    </html>
+    """)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

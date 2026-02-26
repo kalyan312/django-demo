@@ -10,8 +10,7 @@ RUN pip install --no-cache-dir --upgrade pip
 COPY requirements.txt /app/
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy initial code (Skaffold sync will overwrite on changes)
-COPY . /app/
-
 EXPOSE 8000
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+
+# We will run manage.py from the git-synced folder at runtime
+CMD ["sh", "-lc", "cd /app/repo && python manage.py runserver 0.0.0.0:8000"]
