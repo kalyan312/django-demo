@@ -24,10 +24,10 @@ def welcome(request):
     now = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")
     return HttpResponse(f"""
     <html>
-      <head><title>KDemo</title></head>
+      <head><title>Demo applicartion sync</title></head>
       <body style="font-family: Arial; padding: 24px;">
-        <h1>✅ Welcome to K Demo (Django)</h1>
-        <p>Host: kdemo.jadukori.com</p>
+        <h1>✅ Welcome to Demo (Django) v1</h1>
+        <p>Host: --</p>
         <p>Last render: <b>{now}</b></p>
         <p>If you see this, git-sync + Django reload is working.</p>
         <hr/>
