@@ -26,10 +26,10 @@ def welcome(request):
     <html>
       <head><title>Demo applicartion sync</title></head>
       <body style="font-family: Arial; padding: 24px;">
-        <h1>✅ Welcome to Demo (Django) v1</h1>
+        <h1>✅ Welcome to Demo (Django)</h1>
         <p>Host: --</p>
         <p>Last render: <b>{now}</b></p>
-        <p>If you see this, git-sync + Django reload is working.</p>
+        <p>If you see this, git-sync + Django reload is working, reloaded indicator: 1 .</p>
         <hr/>
         <a href="/admin/">Go to Admin</a>
       </body>
